@@ -29,7 +29,7 @@ function avg(array){
         return false;
 
 }
-
+//  somenew 
 
 // 4.
 function generatePrimeNumbers(count){
