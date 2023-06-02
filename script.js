@@ -8,6 +8,11 @@ function fToC(fahrenheit)
 }
 fToC(45);
 
+const convertToCelsius = (fah) => {
+  return (fah - 32) * 5/9
+}
+console.log('celsius res', convertToCelsius(20))
+   
 // 2.
 function avg(array){
     let sum = 0;
@@ -29,7 +34,7 @@ function avg(array){
         return false;
 
 }
-//  somenew 
+  }
 
 // 4.
 function generatePrimeNumbers(count){
@@ -55,7 +60,7 @@ function isprime(num){
   }
   return true;
   let primeNumbers = generatePrimeNumbers(100);
-  console.log(primeNumbers);
+  // console.log(primeNumbers);
 }
 
 
