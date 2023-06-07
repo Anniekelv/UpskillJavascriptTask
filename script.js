@@ -3,34 +3,47 @@
 function FToC(fahrenhiet){
 }
 const convertToCelsius = (fah) => {
-  return (fah - 32) * 5/9
-}
-console.log('celsius res', convertToCelsius(20))
+ }
+return (fah - 32) * 5/9
+
+//Question 1: Test Cases
+// console.log(fahrToCel(32) +"°C")//0°C
+// console.log(fahrToCel(212) + "°C")//100°C
+
 
    
 // 2. Create a function that will calculate the average of numbers in an array.
 
-function calculateAverage(array) {
-  let numbers = [5,10,15,20];
-  let avergae = calculateAverage(array);  
+let arrayAverage = (array) => {
+  let arrayNum = 0;
+  for(let i= 0; i < array.lenght; i++){
+      arrayNum = arrayNum + array[i]
+  }
+  return (arrayNum/array.length)
 }
-   console.log(avergae); 
+
+
+//Question 2: Test Cases
+// console.log(arrayAverage([5,2,9,7,1])) // 4.8
+// console.log(arrayAverage([1,2,3])) // 2
 
   
 // 3. Create a function that checks if a number, n is divisible by two numbers x and y. All inputs are positive, non-zero digits.
-  function isDivisible(n,x,y) {
+  let duoDiviChecker = (n,x,y) =>{
     if (n % x === 0 && n % y === 0) {
      return true;
     } else {
         return false
 }
   }
-console.log(isDivisible)
+// Question 2: Test Cases
+// console.log(duoDiviChecker(12,3,4)) // true
+// console.log(duoDiviChecker(49,7,9)) // false
 
   
 // 4.Create a function that will output the first 100 prime numbers.
 
-function generatePrimeNumbers(n){
+let  generatePrimeNumbers = (n) =>{
   let primes = [];
   let num = 2;
 
@@ -59,7 +72,7 @@ console.log(primeNumbers);
 
 // 5.Create a function that will return a boolean specifying if a number is a prime number.
 
-function isprime(num){
+let isprime = (num) =>{
   if (num < 2) {
     return false;
   }
@@ -70,17 +83,22 @@ function isprime(num){
   }
   return true;
 }
-console.log(isprime)
+// Question 5 : Test Cases
+// console.log(isPrime(7)) // true
+// console.log(isPrime(12)) // false
 
 
-// 6.Create a function that receives an array of numbers of diverse numbers and returns an array containing only positive numbers
+// // 6.Create a function that receives an array of numbers of diverse numbers and returns an array containing only positive numbers
 
-function getPositiveNumbers(num) {
+let   getPositiveNumbers =(num) => {
   const positiveNumber = numbers.filter(function(number) {
     return number > 0;
   });
   return PositiveNumbers;
 }
+
+// Question 6 : Test Cases
+// console.log(getPositiveNumbers([-2,5,0,10,-7,3])) // [5,10,3]
 
 
 // 7. Write a program that prints the numbers from 1 to 100. But for multiples of 3 prints "Fizz" instead of the number and for the multiples of 5 prints "Buzz". For numbers which are multiples of both 3 and 5 prints "FizzBuzz".
@@ -99,6 +117,7 @@ for (const i = 1; i <=100; i++) {
 
 
 
+
 // 8.The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria; 
 
 function generateHashtag(input) {
@@ -111,6 +130,5 @@ function generateHashtag(input) {
   if (hashtag.length > 140) {
     return false;
   }
-
   return hashtag;
 }
