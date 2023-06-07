@@ -6,14 +6,9 @@ const convertToCelsius = (fah) => {
  }
 return (fah - 32) * 5/9
 
-//Question 1: Test Cases
-// console.log(fahrToCel(32) +"°C")//0°C
-// console.log(fahrToCel(212) + "°C")//100°C
-
-
-   
-// 2. Create a function that will calculate the average of numbers in an array.
-
+ // 2.Create a function that will calculate the average of numbers in an array.
+  let numbers = [5,10,15,20];
+  let avergae = calculateAverage(array);  
 let arrayAverage = (array) => {
   let arrayNum = 0;
   for(let i= 0; i < array.lenght; i++){
@@ -21,6 +16,7 @@ let arrayAverage = (array) => {
   }
   return (arrayNum/array.length)
 }
+   console.log(avergae); 
 
 
 //Question 2: Test Cases
@@ -36,7 +32,7 @@ let arrayAverage = (array) => {
         return false
 }
   }
-// Question 2: Test Cases
+// Question 3: Test Cases
 // console.log(duoDiviChecker(12,3,4)) // true
 // console.log(duoDiviChecker(49,7,9)) // false
 
