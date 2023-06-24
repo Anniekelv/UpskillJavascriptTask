@@ -1,22 +1,20 @@
 // 1. Create a function that will be able to convert figures from Fahrenheit to Celsius.
 
-function FToC(fahrenhiet){
+let fahrToCel = (fahr) => {
+  return (fahr - 32) * (5/9)
 }
-const convertToCelsius = (fah) => {
- }
-return (fah - 32) * 5/9
+//Question 1 : Test Cases
+// console.log(fahrToCel (32) + "C") //0°C
+// console.log(fahrToCel (212) + "C") //100°C
 
  // 2.Create a function that will calculate the average of numbers in an array.
-  let numbers = [5,10,15,20];
-  let avergae = calculateAverage(array);  
-let arrayAverage = (array) => {
-  let arrayNum = 0;
-  for(let i= 0; i < array.lenght; i++){
-      arrayNum = arrayNum + array[i]
+ const av = (arr) => { 
+  let res = 0 
+  for(let i = 0; i < arr.length; i++) { 
+  res += arr[i] 
+  } 
+  return res/2 
   }
-  return (arrayNum/array.length)
-}
-   console.log(avergae); 
 
 
 //Question 2: Test Cases
@@ -42,26 +40,24 @@ let arrayAverage = (array) => {
 let  generatePrimeNumbers = (n) =>{
   let primes = [];
   let num = 2;
+  if(number === 1){
+    console.log
+  }
+  if (number>1){
+    for (let i = 2; i < number;i++){
+      if (number % i == 0){
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime){
+      console.log(`${number}is a prime number`);
+    }else{
+      cocnsole.log(`${number}is not a prime number`);
+    }
+  }
+}
 
-  while (primes.lenght < n){
-    if (isprime(num)){
-      primes.push(num);
-    }
-    num++
-  }
-  return primes;
-}
-function isprime(num){
-  if (num < 2) {
-    return false;
-  }
-  for (let i =2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0){
-     return false;
-    }
-  }
-  return true;
-}
 const primeNumbers = generatePrimeNumbers(100);
 console.log(primeNumbers);
 
@@ -86,12 +82,14 @@ let isprime = (num) =>{
 
 // // 6.Create a function that receives an array of numbers of diverse numbers and returns an array containing only positive numbers
 
-let   getPositiveNumbers =(num) => {
-  const positiveNumber = numbers.filter(function(number) {
-    return number > 0;
+function getPositiveNumbers(num){
+  const numbers = [-2,-3,-5,-7]
+  const positiveNumber = numbers.filter(function(number){
+return number > 0
   });
-  return PositiveNumbers;
+  return positiveNumber;
 }
+getPositiveNumbers
 
 // Question 6 : Test Cases
 // console.log(getPositiveNumbers([-2,5,0,10,-7,3])) // [5,10,3]
@@ -99,7 +97,7 @@ let   getPositiveNumbers =(num) => {
 
 // 7. Write a program that prints the numbers from 1 to 100. But for multiples of 3 prints "Fizz" instead of the number and for the multiples of 5 prints "Buzz". For numbers which are multiples of both 3 and 5 prints "FizzBuzz".
 
-for (const i = 1; i <=100; i++) {
+for (const i = 1; i <=100; i++){
   if (i % 3 === 0 && i % 5 ===0){
     console.log("FizzBuzz");
  } else if (i % 3 === 0){
